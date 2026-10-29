@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,operation,domain
+access_domotica_device_group_domotica_user,access domotica_device group_domotica_user,domotica.device,domotica.group_domotica_user,crud,
+access_domotica_kidn_group_domotica_user,access domotica_kind group_domotica_user,domotica.kind,domotica.group_domotica_user,r,

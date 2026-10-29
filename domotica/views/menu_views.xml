@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_domotica_device"
+              action="action_domotica_device"
+              sequence="1"/>
+
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_domotica_device_list" model="ir.ui.view">
+        <field name="name">domotica.device.list</field>
+        <field name="model">domotica.device</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="kind_of_domotica"/>
+                <field name="ip_address"/>
+                <field name="is_online" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_domotica_device_form" model="ir.ui.view">
+        <field name="name">domotica.device.form</field>
+        <field name="model">domotica.device</field>
+        <field name="arch" type="xml">
+            <form string="Domotica Device">
+                <header>
+                    <button name="action_check_connectivity" string="Check Conectivity" class="btn btn-secondary"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1 class="o_outlined">
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group name="domotica">
+                        <group name="domotica_basic_information">
+                            <field name="name"/>
+                            <field name="kind_of_domotica"/>
+                        </group>
+                        <group name="domotica_status">
+                            <field name="ip_address"/>
+                            <field name="is_online" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_domotica_device" model="ir.actions.act_window">
+        <field name="name">Domotica</field>
+        <field name="res_model">domotica.device</field>
+    </record>
+
+</odoo>
